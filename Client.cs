@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApexSharp
 {
-    class ApexClient
+    public class ApexClient
     {
         HttpClient _client;
         public AidModels aidModel;
