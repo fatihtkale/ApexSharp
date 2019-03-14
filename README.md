@@ -13,7 +13,7 @@ Advanced search:
 ```cs
 
 ApexClient Client = new ApexClient();
-var Search = await Client.NormalSearch("psn", "W
+var Search = await Client.NormalSearch("psn", "Waayyzz");
 
 var User = Search.results.FirstOrDefault();
 
