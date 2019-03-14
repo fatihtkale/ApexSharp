@@ -85,4 +85,4 @@ or
 ```
 
 # For support Join my discord!
-[Disocord](https://discord.gg/zZzC4za)
+[Discord](https://discord.gg/zZzC4za)
