@@ -24,9 +24,11 @@ Console.WriteLine(AidSearch.SkillRatio);
 for a better understanding of how to use the wrapper check out test folder in the repo
 
 # Install
-this project is can be used from either NuGet:
-link
+this project can be installed by using the nuget package
+ - [Link to nuget package](https://www.nuget.org/packages/ApexSharp/1.0.0)
+ 
 or
+
  - Clone the project.
  - Drag out Client.cs & Models.cs
  - Make sure you have [NewtonSoft.Json](https://www.newtonsoft.com/json)
