@@ -1,5 +1,6 @@
 # About this api wrapper
-There are no limitations to this API as long as it is not abused. We hold the right to refuse service to anyone who we believe is abusing this system.
+This wrapper is using the [ApexTab](apextab.com)
+There are no limitations to this API as long as it is not abused. Apextab hold the right to refuse service to anyone who we believe is abusing their system.
 
 # How to use?
 Simple search:
