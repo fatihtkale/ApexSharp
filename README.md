@@ -5,12 +5,21 @@ There are no limitations to this API as long as it is not abused. Apextab hold t
 # How to use?
 Simple search:
 ```cs
-
+ApexClient Client = new ApexClient();
+var Search = await Client.NormalSearch("psn", "Waayyzz");
 ```
 
 Advanced search:
 ```cs
 
+ApexClient Client = new ApexClient();
+var Search = await Client.NormalSearch("psn", "W
+
+var User = Search.results.FirstOrDefault();
+
+var AidSearch = await Client.IdSearch(User.Aid);
+
+Console.WriteLine(AidSearch.SkillRatio);
 ```
 for a better understanding of how to use the wrapper check out test folder in the repo
 
