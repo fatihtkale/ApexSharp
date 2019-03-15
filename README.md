@@ -25,7 +25,7 @@ for a better understanding of how to use the wrapper check out test folder in th
 
 # Install
 this project can be installed by using the nuget package
- - [Link to nuget package](https://www.nuget.org/packages/ApexSharp/1.0.0)
+ - [Link to nuget package](https://www.nuget.org/packages/ApexSharp)
  
 or
 
