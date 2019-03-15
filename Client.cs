@@ -10,7 +10,7 @@ namespace ApexSharp
 {
     public class ApexClient
     {
-        HttpClient _client;
+        HttpClient client;
         public AidModels aidModel;
         public NormalModels normalModel;
 
@@ -19,7 +19,7 @@ namespace ApexSharp
         ///</summary>
         public async Task<NormalModels> NormalSearch(string platform, string name)
         {
-            _client = new HttpClient();
+            client = new HttpClient();
             WebUtility.UrlEncode(name);
 
             var url = await client.GetStringAsync($"https://apextab.com/api/search.php?platform={platform}&search={name}");
@@ -33,9 +33,9 @@ namespace ApexSharp
         ///</summary>
         public async Task<AidModels> IdSearch(string aid)
         {   
-            _client = new HttpClient();
+            client = new HttpClient();
             WebUtility.UrlEncode(aid);
-            var url = await _client.GetStringAsync($"https://apextab.com/api/player.php?aid={aid}");
+            var url = await client.GetStringAsync($"https://apextab.com/api/player.php?aid={aid}");
             AidModels aiddata = JsonConvert.DeserializeObject<AidModels>(url);
 
             return aiddata;

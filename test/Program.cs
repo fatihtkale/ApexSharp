@@ -2,6 +2,7 @@
 using System;
 using ApexSharp;
 using System.Threading.Tasks;
+
 namespace test
 {
     class Program
@@ -13,19 +14,31 @@ namespace test
 
         static async Task MainAsync(string[] args)
         {
-            // Normal Search
-            ApexClient Client = new ApexClient();
-            var Search = await Client.NormalSearch("psn", "Waayyzz");
-            
-            // FirstOrDefault used to get the objects inside of our JSON Array
-            var User = Search.results.FirstOrDefault();
+            ApexClient c = new ApexClient();
 
-            // User.Kills
+            var search = await c.NormalSearch("psn", "Waayyzz");
 
-            // Using the AID to get more accurate stats on the user
-            var AidSearch = await Client.IdSearch(User.Aid);
+            // Getting the stats from JSON Array
+            var getStats = search.Results.FirstOrDefault();
 
-            // AidSearch.Skillratio; And what ever else you wanna use.
+            // With Normal Search you can get the following stats
+            /*
+                getStats.Aid;
+                getStats.Avatar
+                getStats.Kills
+                getStats.Legend
+                getStats.Level
+                getStats.Name
+                getStats.Platform            
+            */
+
+            // By using normal search we can do a ID search
+            // ID Search does give us more stats we can view
+
+            var idSearch = await c.IdSearch(getStats.Aid);
+
+            // With ID Search you can a longer list of
+            // Stats look into Models.cs to see what you can return
 
             Console.ReadLine();
         }

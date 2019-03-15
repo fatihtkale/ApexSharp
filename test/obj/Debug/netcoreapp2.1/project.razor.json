@@ -1,6 +1,6 @@
 {
-  "ProjectFilePath": "e:\\Programming\\c#\\ApexApi\\test\\test.csproj",
-  "TargetFramework": "netcoreapp2.2",
+  "ProjectFilePath": "c:\\Users\\fato\\Desktop\\test\\test.csproj",
+  "TargetFramework": "netcoreapp2.1",
   "TagHelpers": [],
   "Configuration": {
     "ConfigurationName": "UnsupportedRazor",
