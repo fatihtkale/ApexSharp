@@ -1,3 +1,6 @@
+
+![nuget](https://img.shields.io/nuget/dt/ApexSharp.svg?logo=nuget)
+
 # About this api wrapper
 This wrapper is using the [ApexTab](apextab.com)
 There are no limitations to this API as long as it is not abused. Apextab hold the right to refuse service to anyone who we believe is abusing their system.
