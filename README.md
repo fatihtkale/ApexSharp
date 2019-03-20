@@ -1,5 +1,4 @@
-
-![nuget](https://img.shields.io/nuget/dt/ApexSharp.svg?logo=nuget)
+![Nuget](https://img.shields.io/nuget/dt/ApexSharp.svg?logo=nuget)
 
 # About this api wrapper
 This wrapper is using the [ApexTab](apextab.com)
