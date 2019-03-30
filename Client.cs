@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+using System.Linq;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -8,11 +9,9 @@ using System.Threading.Tasks;
 
 namespace ApexSharp
 {
-    public class ApexClient
+    class ApexClient
     {
         HttpClient client;
-        public AidModels aidModel;
-        public NormalModels normalModel;
 
         ///<summary>
         ///<para>Search A user up with their username and platform</para>
@@ -20,9 +19,7 @@ namespace ApexSharp
         public async Task<NormalModels> NormalSearch(string platform, string name)
         {
             client = new HttpClient();
-            WebUtility.UrlEncode(name);
-
-            var url = await client.GetStringAsync($"https://apextab.com/api/search.php?platform={platform}&search={name}");
+            var url = await client.GetStringAsync($"https://apextab.com/api/search.php?platform={platform.ToLower()}&search={name}");
             NormalModels normaldata = JsonConvert.DeserializeObject<NormalModels>(url);
 
             return normaldata;
@@ -34,7 +31,6 @@ namespace ApexSharp
         public async Task<AidModels> IdSearch(string aid)
         {   
             client = new HttpClient();
-            WebUtility.UrlEncode(aid);
             var url = await client.GetStringAsync($"https://apextab.com/api/player.php?aid={aid}");
             AidModels aiddata = JsonConvert.DeserializeObject<AidModels>(url);
 
