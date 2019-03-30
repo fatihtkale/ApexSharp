@@ -194,16 +194,7 @@ namespace ApexSharp
 
     }
 
-    public partial class NormalModels
-    {
-        [JsonProperty("results")]
-        public List<Result> Results { get; set; }
-
-        [JsonProperty("totalresults")]
-        public long Totalresults { get; set; }
-    }
-
-    public partial class Result
+    public class RootObjects
     {
         [JsonProperty("aid")]
         public string Aid { get; set; }
@@ -221,10 +212,18 @@ namespace ApexSharp
         public string Legend { get; set; }
 
         [JsonProperty("level")]
-        [JsonConverter(typeof(string))]
         public long Level { get; set; }
 
         [JsonProperty("kills")]
         public long Kills { get; set; }
+    }
+
+    public class NormalModels
+    {
+        [JsonProperty("results")]
+        public List<RootObjects> results { get; set; }
+
+        [JsonProperty("totalresults")]
+        public int totalresults { get; set; }
     }
 }
